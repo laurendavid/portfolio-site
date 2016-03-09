@@ -1,14 +1,52 @@
 h1, h2, h3 {
 	text-transform: lowercase;
+	font-family: $fancyFont;
+	color: $softBlack;
+	text-shadow: 1px 1px 1px darken($mintGreen, 10%);
 }
 
 h1 {
-	font-family: $fancyFont;
-	font-size: 5rem;
+	font-size: 5.5rem;
+	letter-spacing: 9px;
+	position: relative;
+	margin-top: 13%;
+	&::after {
+		content: '';
+		display: block;
+		width: 20%;
+		height: 2px;
+		background: darken($mintGreen, 10%);
+		position: absolute;
+		bottom: -12px;
+		left: 5px;
+	}
+}
+
+h2.webDev {
+	font-size: 2rem;
+	font-family: $baseFont;
+	text-transform: uppercase;
 	color: $softBlack;
-	text-shadow: 1px 1px 1px $peach;
-	letter-spacing: 10px;
-	margin-top: 10%;
+	letter-spacing: 2px;
+	margin: 0;
+	position: absolute;
+	top: 57%;
+	right: 37.5%;
+}
+
+h2:not(.webDev) {
+	font-size: 3rem;
+	position: relative;
+	&::after {
+		content: '';
+		display: block;
+		width: 15%;
+		height: 2px;
+		background: darken($mintGreen, 10%);
+		position: absolute;
+		bottom: -12px;
+		left: 5px;
+	}
 }
 
 a {
@@ -22,7 +60,8 @@ a {
 /* paragraphs */
 
 p {
-	line-height: 1.5;
+	font-family: $baseFont;
+	line-height: 1.7;
 }
 
 /* lists */

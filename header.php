@@ -18,8 +18,8 @@
     <div class="wrapper flexContainer">
       <div class="diamond" style="background-image: url('<?php the_field('diamond_image') ?>');">
         <div class="flexContainer">
-          <h1><?php the_field( 'header_title' ); ?></h1>
-
+          <h1><?php the_field('header_title'); ?></h1>
+          <h2 class="webDev"><?php the_field('header_subtitle') ?></h2>
           <nav class="diamond__nav">
             <?php wp_nav_menu( array(
               'container' => false,

@@ -4,18 +4,23 @@
 	ul {
 		display: flex;
 		flex-flow: column wrap;
+		align-content: flex-end;
 		transform: rotate(-45deg);
 		li {
-			margin: 10px;
-			// transform: rotate(-45deg);
+			transform: rotate(45deg);
+			padding: 7%;
 			a {
-				color: $softBlack;
-				font-family: $baseFont;
-				font-size: 2rem;
+				color: $spearmintGreen;
+				font-family: $fancyFont;
+				font-size: 2.3rem;
 				font-weight: bold;
 				padding: 10px;
-				text-transform: uppercase;
+				text-transform: lowercase;
 				letter-spacing: 3px;
+				&:hover {
+					color: $softBlack;
+					text-shadow: 1px 1px 1px $spearmintGreen;
+				}
 			}
 		}
 	}

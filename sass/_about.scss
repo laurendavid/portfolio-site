@@ -1,0 +1,13 @@
+.aboutMe {
+  padding: 2% 0;
+  .flexContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .bioImage, .bio {
+      width: 50%;
+      padding: 3%;
+    }
+  }
+}

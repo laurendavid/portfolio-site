@@ -3,13 +3,17 @@
 <main class="main">
   <div class="wrapper">
     <!-- About Section -->
-    <section id="about" class="bio">
+    <section id="about" class="aboutMe">
       <h2><?php the_field('about_title'); ?></h2>
-      
-      
-          <div class="aboutImage">
+      <div class="flexContainer">
+        <div class="bioImage">
             <img src="<?php the_field('about_image'); ?> ">
-          </div>
+        </div> 
+        <div class="bio">
+          <h2><?php the_field('about_subtitle') ?></h2>
+          <p><?php the_field('bio'); ?></p>
+        </div>
+      </div> <!-- ./flexContainer -->
        
       
     </section>
