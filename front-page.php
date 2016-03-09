@@ -1,7 +1,18 @@
 <?php get_header();  ?>
 
-<div class="main">
-  <div class="container">
+<main class="main">
+  <div class="wrapper">
+    <!-- About Section -->
+    <section id="about" class="bio">
+      <h2><?php the_field('about_title'); ?></h2>
+      
+      
+          <div class="aboutImage">
+            <img src="<?php the_field('about_image'); ?> ">
+          </div>
+       
+      
+    </section>
     <section id="portfolio" class="work">
       <?php
           $portfolioItemsQuery = new WP_Query(
@@ -44,13 +55,12 @@
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-        <h2><?php the_title(); ?></h2>
         <?php the_content(); ?>
 
       <?php endwhile; // end the loop?>
     </div> <!-- /,content -->
 
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</main> <!-- /.main -->
 
 <?php get_footer(); ?>

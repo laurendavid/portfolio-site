@@ -1,8 +1,21 @@
+h1, h2, h3 {
+	text-transform: lowercase;
+}
+
+h1 {
+	font-family: $fancyFont;
+	font-size: 5rem;
+	color: $softBlack;
+	text-shadow: 1px 1px 1px $peach;
+	letter-spacing: 10px;
+	margin-top: 10%;
+}
+
 a {
-	color: #BA209B;
+	color: $medGrey;
 	text-decoration: none;
 	&:hover {
-		color: #D424B1;
+		color: $spearmintGreen;
 	}
 }
 
@@ -10,6 +23,15 @@ a {
 
 p {
 	line-height: 1.5;
+}
+
+/* lists */
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style: none;
+	}
 }
 
 /*blockquotes*/
@@ -44,12 +66,6 @@ dt {
 dd {
 	padding: 10px;
 	margin-left: 10px;
-}
-
-/*lists*/
-
-ul li, ol li {
-	padding: 3px;
 }
 
 /*PRE*/

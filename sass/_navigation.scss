@@ -1,14 +1,40 @@
-// ul.menu {
-// 	margin: 0;
-// 	padding: 0;
-// 	li {
-// 		display: inline;
-// 		margin-right: 10px;
-// 		a {
-// 			color: #333;
-// 			padding: 10px;
-// 			background: #333;
-// 			color: white;
-// 		}
-// 	}
-// }
+// Header Nav 
+
+.diamond__nav {
+	ul {
+		display: flex;
+		flex-flow: column wrap;
+		transform: rotate(-45deg);
+		li {
+			margin: 10px;
+			// transform: rotate(-45deg);
+			a {
+				color: $softBlack;
+				font-family: $baseFont;
+				font-size: 2rem;
+				font-weight: bold;
+				padding: 10px;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+		}
+	}
+}
+
+// Footer Nav
+
+footer {
+	ul {
+		display: flex;
+		flex-flow: row wrap;
+		li {
+			a {
+				padding: 10px;
+			}
+			.fa {
+				font-size: 2.2rem;
+				
+			}
+		}
+	}
+}

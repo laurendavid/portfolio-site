@@ -1,0 +1,63 @@
+/*
+====================================
+Variables
+====================================
+*/
+
+$beige: #DCD5C5;
+$lightBeige: #dcd5c5;
+$peach: #e7ac8c;
+$lightPeach: #efcbb7;
+$mintGreen: #cbdad5; // rgb(225,233,230)
+$spearmintGreen: #6a9587;
+$greyGreen: #a2b5af;
+$softWhite: #f4f4f4;
+$softBlack: #272526; // rgb(39,37,38)
+$medGrey: #6b6b6b;
+$lightGrey: #9e9e9e;
+$darkGrey: #333333;
+
+// Fonts
+$baseFont: 'Open Sans', 'Josefin Sans', sans-serif;
+$fancyFont: 'Poiret One', cursive;
+$headingFont: 'Josefin Sans', sans-serif;
+/*
+====================================
+Global Styling
+====================================
+*/
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+// .content {
+// 	float: left;
+// 	width: 65%;
+// 	margin-right: 5%;
+// }
+
+// .full {
+// 	width: 100%;
+// }
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+
+
