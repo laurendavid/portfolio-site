@@ -12,7 +12,7 @@
         <div class="bio">
           <h2><?php the_field('about_subtitle') ?></h2>
           <p><?php the_field('bio'); ?></p>
-          <button><a href="#connect">Let's Connect</a></button>
+          <button><a href="#connect"><?php the_field('connect_button'); ?></a></button>
           <div class="social">
             <?php wp_nav_menu( array(
               'container' => false,
@@ -27,10 +27,11 @@
   <!-- PORTFOLIO SECTION -->
   <section id="portfolio" class="work">
     <div class="wrapper">
+       <h2><?php the_field('portfolio_title'); ?></h2>
       <?php
           $portfolioItemsQuery = new WP_Query(
           array(
-                  'posts_per_page' => 3,
+                  'posts_per_page' => 4,
                   'post_type' => 'portfolio',
                   'order' => 'ASC'
                   )
@@ -41,20 +42,15 @@
               <?php while ($portfolioItemsQuery->have_posts()) : $portfolioItemsQuery->the_post(); ?>
 
                   <section id="<?php echo $post->post_name; ?>">
-                      <div class="postText">
-                        <h2><?php the_title(); ?></h2>
-                        <?php the_content(); ?>
-                        <p><?php the_sub_field('short_description'); ?></p>
-                        <a href="">View Live</a>
+                      <div class="projectImages">
+                        <img src="<?php the_field('images'); ?>" alt="">
                       </div>
-                      <div class="images">
-                          <?php while( has_sub_field('images') ): ?>
-                              <div class="image">
-                                  <p><?php the_sub_field('caption'); ?></p>
-                                  <?php $image = get_sub_field('image'); ?>
-                                  <img src="<?php echo $image['sizes']['square'] ?>">
-                              </div>
-                          <?php endwhile; ?>
+                      <div class="projectText">
+                        <h2><?php the_title(); ?></h2>
+                        <h3><?php the_field('subtitle'); ?></h3>
+                        <p><?php the_field('short_description'); ?></p>
+                        <?php the_sub_field('skill_set'); ?>
+                        <button><a href="<?php the_field('view_live') ?> ">View Live</a></button>
                       </div>
                   </section>
               <?php endwhile; ?>
@@ -62,7 +58,8 @@
               <?php wp_reset_postdata(); ?>
               
         <?php endif; ?>
-  </div> <!-- ./wrapper -->
+    </div> <!-- ./wrapper -->
+  </section> <!-- ./portfolio section -->
 </main> <!-- /.main -->
 
 <!-- CONTACT SECTION -->

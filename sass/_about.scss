@@ -20,15 +20,34 @@ main {
     .bio {
       width: 50%;
       padding: 3%;
+      background: fade-out($mintGreen, 0.8);
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-start;
       button {
         border: 0;
         background: none;
+        padding: 0;
         a {
           text-transform: uppercase;
           font-family: $headingFont;
+          font-size: 2.3rem;
+          font-weight: 700;
+          color: $spearmintGreen;
+          &:hover {
+            color: $softBlack;
+            text-shadow: 1px 1px 1px darken($mintGreen, 10%); 
+          }
+        }
+      }
+      .social {
+        width: 50%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        ul {
+          margin: auto;
         }
       }
     }
