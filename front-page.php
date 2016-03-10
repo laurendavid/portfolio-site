@@ -1,23 +1,32 @@
 <?php get_header();  ?>
 
 <main class="main">
-  <div class="wrapper">
-    <!-- About Section -->
-    <section id="about" class="aboutMe">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="aboutMe">
+    <div class="wrapper">
       <h2><?php the_field('about_title'); ?></h2>
       <div class="flexContainer">
-        <div class="bioImage">
+        <div class="bioImage" style="background-image: url('<?php the_field('diamond_image') ?>');">
             <img src="<?php the_field('about_image'); ?> ">
         </div> 
         <div class="bio">
           <h2><?php the_field('about_subtitle') ?></h2>
           <p><?php the_field('bio'); ?></p>
+          <button><a href="#contact">Let's Connect</a></button>
+          <div class="social">
+            <?php wp_nav_menu( array(
+              'container' => false,
+              'theme_location' => 'social'
+            )); ?>
+          </div>
         </div>
       </div> <!-- ./flexContainer -->
-       
-      
-    </section>
-    <section id="portfolio" class="work">
+    </div> <!-- ./wrapper -->
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio" class="work">
+    <div class="wrapper">
       <?php
           $portfolioItemsQuery = new WP_Query(
           array(
@@ -53,8 +62,12 @@
               <?php wp_reset_postdata(); ?>
               
         <?php endif; ?>
-      </section>
+  </div> <!-- ./wrapper -->
+</main> <!-- /.main -->
 
+<!-- CONTACT SECTION -->
+</section id="connect" class="contact">
+  <div class="wrapper">
     <div class="content">
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -62,9 +75,9 @@
         <?php the_content(); ?>
 
       <?php endwhile; // end the loop?>
-    </div> <!-- /,content -->
-
-  </div> <!-- /.container -->
-</main> <!-- /.main -->
+    </div> <!-- /.content -->
+  </div> <!-- /.wrapper -->
+</section>
 
 <?php get_footer(); ?>
+ 

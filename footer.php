@@ -1,11 +1,11 @@
-<footer>
+<footer id="social">
   <div class="wrapper">
     <p>&copy; <?php echo date('Y'); ?> | Made with <i class="fa fa-heart-o"></i> by Lauren David</p>
     <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'social'
     )); ?>
-  </div>
+  </div> <!-- /.wrapper -->
 </footer>
 
 <script>

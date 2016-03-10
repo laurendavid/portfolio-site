@@ -1,13 +1,25 @@
 .aboutMe {
   padding: 2% 0;
+  background: $lightGrey; /* fallback for old browsers */
+  background: linear-gradient(to bottom, darken($softWhite, 5%) , lighten($lightGrey, 10%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
   .flexContainer {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    .bioImage, .bio {
+    .bioImage, {
+      width: 50%;
+      padding: 5%;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: contain;
+    }
+    .bio {
       width: 50%;
       padding: 3%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
     }
   }
 }

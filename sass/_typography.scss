@@ -40,7 +40,7 @@ h2:not(.webDev) {
 	&::after {
 		content: '';
 		display: block;
-		width: 15%;
+		width: 25%;
 		height: 2px;
 		background: darken($mintGreen, 10%);
 		position: absolute;
@@ -84,37 +84,6 @@ blockquote {
 	}
 }
 
-/*tables*/
-
-table {
-	td {
-		padding: 10px;
-	}
-	tr td:first {
-		padding-right: 0;
-	}
-}
-
-/*def lists*/
-
-dt {
-	font-weight: 600;
-	padding-bottom: 5px;
-}
-
-dd {
-	padding: 10px;
-	margin-left: 10px;
-}
-
-/*PRE*/
-
-pre {
-	background: #F7F7F7;
-	padding: 10px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-}
 
 
 /*
