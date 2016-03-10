@@ -12,7 +12,7 @@
         <div class="bio">
           <h2><?php the_field('about_subtitle') ?></h2>
           <p><?php the_field('bio'); ?></p>
-          <button><a href="#contact">Let's Connect</a></button>
+          <button><a href="#connect">Let's Connect</a></button>
           <div class="social">
             <?php wp_nav_menu( array(
               'container' => false,

@@ -1,7 +1,10 @@
+main {
+  max-width: 100%;
+  background: $lightGrey; /* fallback for old browsers */
+  background: linear-gradient(to bottom, darken($softWhite, 5%) , lighten($lightGrey, 10%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
+}
 .aboutMe {
   padding: 2% 0;
-  background: $lightGrey; /* fallback for old browsers */
-  background: linear-gradient(to bottom, darken($softWhite, 5%) , lighten($lightGrey, 10%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
   .flexContainer {
     width: 100%;
     display: flex;
@@ -20,6 +23,14 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-start;
+      button {
+        border: 0;
+        background: none;
+        a {
+          text-transform: uppercase;
+          font-family: $headingFont;
+        }
+      }
     }
   }
 }
