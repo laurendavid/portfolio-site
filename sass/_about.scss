@@ -1,16 +1,16 @@
 main {
   max-width: 100%;
-  background: $lightGrey; /* fallback for old browsers */
-  background: linear-gradient(to bottom, darken($softWhite, 5%) , lighten($lightGrey, 10%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
 }
 .aboutMe {
-  padding: 2% 0;
+  padding: 5% 0;
+  background: $lightGrey; /* fallback for old browsers */
+  background: linear-gradient(to bottom, darken($softWhite, 5%) , lighten($lightGrey, 10%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
   .flexContainer {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    .bioImage, {
+    .bioImage, .bio {
       width: 50%;
       padding: 5%;
       background-repeat: no-repeat;
@@ -18,37 +18,19 @@ main {
       background-size: contain;
     }
     .bio {
-      width: 50%;
-      padding: 3%;
-      background: fade-out($mintGreen, 0.8);
       display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      button {
-        border: 0;
-        background: none;
-        padding: 0;
-        a {
-          text-transform: uppercase;
-          font-family: $headingFont;
-          font-size: 2.3rem;
-          font-weight: 700;
-          color: $spearmintGreen;
-          &:hover {
-            color: $softBlack;
-            text-shadow: 1px 1px 1px darken($mintGreen, 10%); 
-          }
-        }
-      }
+      flex-direction: column;
+      justify-content: space-around;
+      .socialParent {
+        width: 100%;
       .social {
-        width: 50%;
+        width: 27%;
+        margin-top: 2%;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        ul {
-          margin: auto;
-        }
+      }
       }
     }
   }

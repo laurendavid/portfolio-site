@@ -12,14 +12,16 @@
         <div class="bio">
           <h2><?php the_field('about_subtitle') ?></h2>
           <p><?php the_field('bio'); ?></p>
-          <button><a href="#connect"><?php the_field('connect_button'); ?></a></button>
-          <div class="social">
-            <?php wp_nav_menu( array(
-              'container' => false,
-              'theme_location' => 'social'
-            )); ?>
-          </div>
-        </div>
+          <div class="socialParent">
+            <button><a href="#connect"><?php the_field('connect_button'); ?></a></button>
+            <div class="social">
+              <?php wp_nav_menu( array(
+                'container' => false,
+                'theme_location' => 'social'
+              )); ?>
+            </div>
+          </div> <!-- ./flexParent -->
+        </div> <!-- ./bio -->
       </div> <!-- ./flexContainer -->
     </div> <!-- ./wrapper -->
   </section>
@@ -41,8 +43,8 @@
 
               <?php while ($portfolioItemsQuery->have_posts()) : $portfolioItemsQuery->the_post(); ?>
 
-                  <section id="<?php echo $post->post_name; ?>">
-                      <div class="projectImages">
+                  <section id="<?php echo $post->post_name; ?>" class="flexContainer">
+                      <div class="projectImage" style="background-image: url('<?php echo the_field('diamond_pic') ?>');">
                         <img src="<?php the_field('images'); ?>" alt="">
                       </div>
                       <div class="projectText">
@@ -50,7 +52,10 @@
                         <h3><?php the_field('subtitle'); ?></h3>
                         <p><?php the_field('short_description'); ?></p>
                         <?php the_sub_field('skill_set'); ?>
-                        <button><a href="<?php the_field('view_live') ?> ">View Live</a></button>
+                        <div class="flexParent">
+                          <button><a href="http://laurendavid.ca/wordpresstheme"><?php the_field('view_live') ?></a></button>
+                         <!--  <button><a href="http://bankbeans.github.io/projectRenew/"></a></button> -->
+                        </div>
                       </div>
                   </section>
               <?php endwhile; ?>

@@ -1,0 +1,19 @@
+.work {
+	padding: 5% 0;
+	background: darken($softWhite, 5%);
+	.flexContainer {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		.projectImage, .projectText {
+			width: 50%;
+			padding: 5%;
+		}
+		.projectImage {
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: contain;
+		}
+	}
+}

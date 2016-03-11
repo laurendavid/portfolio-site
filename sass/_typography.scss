@@ -37,6 +37,8 @@ h2.webDev {
 h2:not(.webDev) {
 	font-size: 3rem;
 	position: relative;
+	margin: 0;
+	padding: 0;
 	&::after {
 		content: '';
 		display: block;
@@ -45,7 +47,7 @@ h2:not(.webDev) {
 		background: darken($mintGreen, 10%);
 		position: absolute;
 		bottom: -12px;
-		left: 5px;
+		left: 2px;
 	}
 }
 
@@ -57,11 +59,31 @@ a {
 	}
 }
 
+/* button */
+button {
+  border: 3px solid lighten($medGrey, 5%);
+  background: none;
+  padding: 1% 2%;
+  &:hover {
+  	border: 3px solid lighten($spearmintGreen, 5%);
+  }
+  a {
+    text-transform: lowercase;
+    font-family: $headingFont;
+    font-size: 2.3rem;
+    color: darken($mintGreen, 30%);
+    letter-spacing: 2px;
+    &:hover {
+      color: $medGrey; 
+    }
+  }
+}
+
 /* paragraphs */
 
 p {
 	font-family: $baseFont;
-	line-height: 1.7;
+	line-height: 1.8;
 }
 
 /* lists */
