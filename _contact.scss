@@ -1,0 +1,26 @@
+.contact {
+	max-width: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	.flexContainer {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		.location {
+			width: 50%;
+			padding: 2%;
+			.email {
+				color: $darkGrey;
+			}
+			.inside {
+				border-top: 2px solid $softBlack;
+				margin-top: 2%;
+			}
+		}
+		form {
+			width: 50%;
+		}
+	}
+}

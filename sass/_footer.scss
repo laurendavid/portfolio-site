@@ -1,3 +1,17 @@
 footer {
-	clear: both;
+	max-width: 100%;
+	background: $softBlack;
+	.flexContainer {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		p {
+			color: $softWhite;
+		}
+		.socialLinks {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: center;
+		}
+	}
 }

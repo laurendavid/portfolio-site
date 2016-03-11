@@ -1,10 +1,12 @@
-<footer id="social">
-  <div class="wrapper">
+<footer>
+  <div class="wrapper flexContainer">
     <p>&copy; <?php echo date('Y'); ?> | Made with <i class="fa fa-heart-o"></i> by Lauren David</p>
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'social'
-    )); ?>
+    <div class="socialLinks">
+	    <?php wp_nav_menu( array(
+	      'container' => false,
+	      'theme_location' => 'social'
+	    )); ?>
+    </div>
   </div> <!-- /.wrapper -->
 </footer>
 

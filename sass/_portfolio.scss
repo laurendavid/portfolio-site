@@ -1,11 +1,14 @@
 .work {
 	padding: 5% 0;
-	background: darken($softWhite, 5%);
+	background: darken($softWhite, 7%);
 	.flexContainer {
 		width: 100%;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
+		&:nth-child(even) {
+			order: 2;
+		}
 		.projectImage, .projectText {
 			width: 50%;
 			padding: 5%;

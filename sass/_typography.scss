@@ -51,9 +51,16 @@ h2:not(.webDev) {
 	}
 }
 
+h3 {
+	font-size: 2.5rem;
+	color: darken($medGrey, 5%);
+	letter-spacing: 3px;
+}
+
 a {
 	color: $medGrey;
 	text-decoration: none;
+	font-size: 1.8rem;
 	&:hover {
 		color: $spearmintGreen;
 	}
