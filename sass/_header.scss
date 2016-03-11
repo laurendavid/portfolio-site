@@ -22,4 +22,25 @@
 			justify-content: center;
 		}
 	}
+	.fixedNav ul {
+		display: none;
+  		width: 10%;
+  		position: fixed;
+  		top: 30px;
+  		left: 30px;
+	  	li {
+	    	padding: 1.5% 0;
+	    	border-bottom: 2px solid darken($mintGreen, 10%);
+	    	a {
+		      color: $softBlack;
+		      font-family: $headingFont;
+		      text-transform: lowercase;
+		      font-size: 2.5rem;
+		      padding: 10px;
+		      &:hover {
+		        color: $spearmintGreen;
+		      }
+	    	}
+	  	}
+	}
 }

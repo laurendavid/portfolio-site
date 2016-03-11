@@ -15,6 +15,12 @@
 
 <header>
   <div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');">
+    <section class="fixedNav">
+      <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_location' => 'primary'
+      )); ?>
+    </section>
     <div class="wrapper flexContainer">
       <div class="diamond" style="background-image: url('<?php the_field('diamond_image') ?>');">
         <div class="flexContainer">

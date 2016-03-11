@@ -7,6 +7,10 @@ footer {
 		justify-content: space-between;
 		p {
 			color: $softWhite;
+			text-transform: lowercase;
+			font-family: $headingFont;
+			font-size: 1.8rem;
+			letter-spacing: 3px;
 		}
 		.socialLinks {
 			display: flex;
