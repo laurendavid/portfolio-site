@@ -69,19 +69,22 @@ a {
 /* button */
 button {
   border: 3px solid lighten($medGrey, 5%);
-  background: none;
+  background: fade-out($softWhite, 0.7);
   padding: 1% 2%;
   &:hover {
   	border: 3px solid lighten($spearmintGreen, 5%);
+  	background: fade-out($softWhite, 0.5);
   }
   a {
     text-transform: lowercase;
     font-family: $headingFont;
     font-size: 2.3rem;
+    font-weight: bold;
     color: darken($mintGreen, 30%);
     letter-spacing: 2px;
     &:hover {
-      color: $medGrey; 
+      color: $medGrey;
+      transition: all 0.5s ease; 
     }
   }
 }

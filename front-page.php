@@ -79,7 +79,7 @@
     </div>
     
   <!--Contact Form-->
-    <form action="http://www.focuspocus.io/magic/lauren@laurendavid.ca" method="POST" autocomplete="off" name="myForm">
+    <form action="http://www.focuspocus.io/magic/lauren@laurendavid.ca" method="POST" autocomplete="off" name="myForm" class="myForm">
       <h3>Let's Talk</h3>
       <input type="text" name="name" placeholder="name">
       <input type="email" name="email" placeholder="email">
