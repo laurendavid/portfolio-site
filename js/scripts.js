@@ -1,5 +1,7 @@
 $(function(){
-	$('a').smoothScroll();
-	console.log("It's working");
-
+	$('a').smoothScroll({
+		speed: 400,
+		offset: 0
+	});
+	
 });
