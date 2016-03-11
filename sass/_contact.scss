@@ -1,0 +1,79 @@
+.contact {
+	max-width: 100%;
+	height: 80vh;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	.overlay {
+		max-width: 100%;
+		height: 80vh;
+		background: fade-out($mintGreen, 0.4);
+		padding: 3%;
+	}
+	.flexContainer {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		.location {
+			width: 50%;
+			padding: 3%;
+			a {
+				color: $darkGrey;
+				font-size: 2.1rem;
+				&:hover {
+					color: lighten($spearmintGreen, 5%);
+				}
+			}
+			.inside {
+				width: 100%;
+				margin-top: 3%;
+				p {
+					font-weight: 600;
+					margin-top: 2%;
+				}
+			}
+		}
+		.myForm {
+			width: 50%;
+			padding: 3%;
+			form {
+				width: 100%;
+				margin-top: 6%;
+				input, textarea {
+					width: 100%;
+					padding: 2%;
+					margin-bottom: 5%;	
+					border: 2px solid $medGrey;
+					background: fade-out($softWhite, 0.5);
+					text-transform: lowercase;
+					font-family: $headingFont;	
+					font-weight: bold;
+					font-size: 2rem;
+					letter-spacing: 3px;
+					&::-webkit-input-placeholder {
+						color: $softBlack;
+					}
+					&:focus {
+						outline: 0;
+						border: 2px solid $greyGreen;
+					}
+				}
+				textarea {
+					height: 100px;
+				}
+				.send {
+					width: 25%;
+					border: 2px solid $spearmintGreen;
+  					background: fade-out($spearmintGreen, 0.5);
+					color: lighten($softWhite, 5%);
+					&:hover {
+						border: 2px solid $greyGreen;
+  						background: fade-out($mintGreen, 0.6);
+  						color: $spearmintGreen;
+					}
+				}
+			}
+		}
+	}
+}

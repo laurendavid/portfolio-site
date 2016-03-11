@@ -44,7 +44,7 @@ h2:not(.webDev) {
 		display: block;
 		width: 25%;
 		height: 2px;
-		background: darken($mintGreen, 10%);
+		background: darken($mintGreen, 12%);
 		position: absolute;
 		bottom: -12px;
 		left: 2px;
@@ -52,7 +52,7 @@ h2:not(.webDev) {
 }
 
 h3 {
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 	color: darken($medGrey, 5%);
 	letter-spacing: 3px;
 }
@@ -68,11 +68,11 @@ a {
 
 /* button */
 button {
-  border: 3px solid lighten($medGrey, 5%);
+  border: 2px solid lighten($medGrey, 5%);
   background: fade-out($softWhite, 0.7);
   padding: 1% 2%;
   &:hover {
-  	border: 3px solid lighten($spearmintGreen, 5%);
+  	border: 2px solid lighten($spearmintGreen, 5%);
   	background: fade-out($softWhite, 0.5);
   }
   a {

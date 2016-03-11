@@ -50,7 +50,11 @@
                       <h2><?php the_title(); ?></h2>
                       <h3><?php the_field('subtitle'); ?></h3>
                       <p><?php the_field('short_description'); ?></p>
-                      <?php the_sub_field('skill_set'); ?>
+                      <ul class="skills">
+                        <?php while (has_sub_field('skills')): ?>
+                          <li><?php the_sub_field('skill_set') ?></li>
+                        <?php endwhile; ?>
+                      </ul>
                       <div class="flexParent">
                         <?php while (has_sub_field('view_live')): ?>
                           <button><a href="<?php the_sub_field('live_link'); ?>"><?php the_sub_field('live_text') ?></a></button>  
@@ -69,24 +73,28 @@
 
 <!-- CONTACT SECTION -->
 <section id="connect" class="contact" style="background-image: url('<?php the_field('hero_image'); ?>');">
-  <div class="wrapper flexContainer">
-    <div class="location">
-      <h3>Email</h3>
-      <a href="mailto:lauren@laurendavid.ca" class="email">lauren@laurendavid.ca</a>
-      <div class="inside">
-        <p>I live, work and play in Toronto, Canada. Please use the contact form if you have any questions or requests concerning my services. I will respond to your message within 24 hours.</p>
-      </div>
-    </div>
-    
-  <!--Contact Form-->
-    <form action="http://www.focuspocus.io/magic/lauren@laurendavid.ca" method="POST" autocomplete="off" name="myForm" class="myForm">
-      <h3>Let's Talk</h3>
-      <input type="text" name="name" placeholder="name">
-      <input type="email" name="email" placeholder="email">
-      <textarea name="message" placeholder="message"></textarea>
-      <input type="submit" value="send">
-    </form> 
-  </div> <!-- /.wrapper -->
+  <div class="overlay">
+    <div class="wrapper flexContainer">
+      <section class="location">
+        <h2>Email</h2>
+        <h3><a href="mailto:lauren@laurendavid.ca">lauren@laurendavid.ca</a></h3>
+        <div class="inside">
+          <p><?php the_field('contact_text'); ?></p>
+        </div>
+      </section>
+      
+    <!--Contact Form-->
+      <section class="myForm">
+        <h2>Get In Touch</h2>
+        <form action="http://www.focuspocus.io/magic/lauren@laurendavid.ca" method="POST" autocomplete="off" name="myForm">
+          <input type="text" name="name" placeholder="name">
+          <input type="email" name="email" placeholder="email">
+          <textarea name="message" placeholder="message"></textarea>
+          <input type="submit" value="send" class="send">
+        </form>
+      </section> 
+    </div> <!-- /.wrapper -->
+  </div> <!-- /.overlay -->
 </section>
 
 <?php get_footer(); ?>

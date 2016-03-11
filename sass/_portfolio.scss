@@ -1,12 +1,13 @@
 .work {
 	padding: 5% 0;
-	background: darken($softWhite, 7%);
+	background: darken($softWhite, 10%); /* fallback for old browsers */
+	background: linear-gradient(to bottom, darken($softWhite, 6%) , lighten($lightGrey, 16%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
 	.flexContainer {
 		width: 100%;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
-		&:nth-child(even)>.projectImage {
+		&:nth-child(odd)>.projectImage {
 			order: 2;
 		}
 		.projectImage, .projectText {
@@ -17,6 +18,19 @@
 			background-repeat: no-repeat;
 			background-position: left center;
 			background-size: contain;
+			border-bottom: 2px solid $lightGrey;
+		}
+		.skills {
+			width: 100%;
+			display: flex;
+			flex-flow: row wrap;
+			margin: 3% 0;
+			li {
+				color: $spearmintGreen;
+				font-family: $headingFont;
+				font-size: 1.8rem;
+				margin-right: 3%;
+			}
 		}
 	}
 }
