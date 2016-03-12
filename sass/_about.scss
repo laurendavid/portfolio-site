@@ -5,17 +5,44 @@ main {
   padding: 5% 0;
   background: darken($softWhite, 10%); /* fallback for old browsers */
   background: linear-gradient(to bottom, darken($softWhite, 5%) , lighten($lightGrey, 10%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
+  @media (max-width: 940px) {
+    padding: 5%;
+  }
+  @media (max-width: 480px) {
+    padding: 8%;
+  }
   .flexContainer {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    @media (max-width: 940px) {
+      flex-direction: column;
+      align-items: center; 
+    }
     .bioImage, .bio {
       width: 50%;
       padding: 5%;
       background-repeat: no-repeat;
       background-position: left center;
       background-size: contain;
+      @media (max-width: 940px) {
+        padding: 0;
+      }
+    }
+    .bioImage {
+      img {
+        padding: 8%;
+      }
+      @media (max-width: 940px) {
+        width: 65%;
+        img {
+          padding: 10%;
+        }
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+      }
     }
     .bio {
       display: flex;
@@ -23,14 +50,19 @@ main {
       justify-content: space-around;
       .socialParent {
         width: 100%;
-      .social {
-        width: 27%;
-        margin-top: 2%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
+        .social {
+          width: 100%;
+          margin-top: 2%;
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+        }
       }
+      @media (max-width: 940px) {
+        width: 100%;
+        p {
+          margin-top: 5%;
+        }
       }
     }
   }

@@ -13,9 +13,14 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		.location {
+		.location, .myForm {
 			width: 50%;
 			padding: 3%;
+			@media (max-width: 600px) {
+				width: 100%;
+			}
+		}
+		.location {
 			a {
 				color: $darkGrey;
 				font-size: 2.1rem;
@@ -30,46 +35,45 @@
 					font-weight: 600;
 					margin-top: 2%;
 				}
-			}
+			}	
 		}
-		.myForm {
-			width: 50%;
-			padding: 3%;
-			form {
+		form {
+			width: 100%;
+			margin-top: 6%;
+			@media (max-width: 767px) {
+				margin-top: 10.5%;
+			}
+			input, textarea {
 				width: 100%;
-				margin-top: 6%;
-				input, textarea {
-					width: 100%;
-					padding: 2%;
-					margin-bottom: 5%;	
-					border: 2px solid $medGrey;
-					background: fade-out($softWhite, 0.5);
-					text-transform: lowercase;
-					font-family: $headingFont;	
-					font-weight: bold;
-					font-size: 2rem;
-					letter-spacing: 3px;
-					&::-webkit-input-placeholder {
-						color: $softBlack;
-					}
-					&:focus {
-						outline: 0;
-						border: 2px solid $greyGreen;
-					}
+				padding: 2%;
+				margin-bottom: 5%;	
+				border: 2px solid $medGrey;
+				background: fade-out($softWhite, 0.5);
+				text-transform: lowercase;
+				font-family: $headingFont;	
+				font-weight: bold;
+				font-size: 2rem;
+				letter-spacing: 3px;
+				&::-webkit-input-placeholder {
+					color: $softBlack;
 				}
-				textarea {
-					height: 100px;
+				&:focus {
+					outline: 0;
+					border: 2px solid $greyGreen;
 				}
-				.send {
-					width: 25%;
-					border: 2px solid $spearmintGreen;
-  					background: fade-out($spearmintGreen, 0.5);
-					color: lighten($softWhite, 5%);
-					&:hover {
-						border: 2px solid $greyGreen;
-  						background: fade-out($mintGreen, 0.6);
-  						color: $spearmintGreen;
-					}
+			}
+			textarea {
+				height: 100px;
+			}
+			.send {
+				width: 25%;
+				border: 2px solid $spearmintGreen;
+					background: fade-out($spearmintGreen, 0.5);
+				color: lighten($softWhite, 5%);
+				&:hover {
+					border: 2px solid $greyGreen;
+						background: fade-out($mintGreen, 0.6);
+						color: $spearmintGreen;
 				}
 			}
 		}

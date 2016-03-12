@@ -12,6 +12,5 @@ $(function(){
 	        else {
 	            $('.fixedNav ul').hide();
 	        }
-	    });
-	
+	});
 });

@@ -5,17 +5,33 @@ footer {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
+		padding: 0 2%;
+		@media (max-width: 767px) {
+			padding: 0 5%;
+		}
+		@media (max-width: 480px) {
+			justify-content: center;
+			padding: 3% 0;
+		}
 		p {
 			color: $softWhite;
 			text-transform: lowercase;
 			font-family: $headingFont;
 			font-size: 1.8rem;
 			letter-spacing: 3px;
+			@media (max-width: 480px) {
+				margin: 0;
+				font-size: 1.6rem;
+			}
 		}
 		.socialLinks {
 			display: flex;
 			flex-flow: column wrap;
 			justify-content: center;
+			@media (max-width: 480px) {
+				width: 100%;
+				flex-direction: row;
+			}
 		}
 	}
 }

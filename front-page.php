@@ -7,7 +7,7 @@
       <h2><?php the_field('about_title'); ?></h2>
       <div class="flexContainer">
         <div class="bioImage" style="background-image: url('<?php the_field('diamond_image') ?>');">
-            <img src="<?php the_field('about_image'); ?> ">
+            <img src="<?php the_field('about_image'); ?> "> <!-- photo courtesy of Pam Lau -->
         </div> 
         <div class="bio">
           <h2><?php the_field('about_subtitle') ?></h2>

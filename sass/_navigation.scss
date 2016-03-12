@@ -1,6 +1,11 @@
 // Header Nav 
 
-.diamond__nav {
+.diamondNav {
+	@media (max-width: 600px) {
+		position: absolute;
+		top: 75%;
+		left: 10%;
+	}
 	ul {
 		display: flex;
 		flex-flow: column wrap;
@@ -9,20 +14,59 @@
 		li {
 			transform: rotate(45deg);
 			padding: 7%;
+			@media (max-width: 480px) {
+				padding: 5%;
+			}
 			a {
 				color: $spearmintGreen;
 				font-family: $fancyFont;
-				font-size: 2.3rem;
+				font-size: 2.4rem;
 				font-weight: bold;
 				padding: 10px;
 				text-transform: lowercase;
 				letter-spacing: 3px;
 				&:hover {
 					color: $softBlack;
-					text-shadow: 1px 1px 1px $spearmintGreen;
+					text-shadow: 1px 1px 1px $medGrey;
+				}
+				@media (max-width: 600px) {
+					font-size: 2.3rem;
+					color: $softBlack;
 				}
 			}
 		}
+	}
+}
+
+// Fixed Side Nav
+.fixedNav ul {
+	display: none;
+	width: 13%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background: $mintGreen;
+  	li {
+    	padding: 7% 0;
+    	border-bottom: 2px solid darken($mintGreen, 10%);
+    	a {
+	      color: $softBlack;
+	      font-family: $headingFont;
+	      text-transform: lowercase;
+	      font-size: 2.5rem;
+	      padding: 10px;
+	      &:hover {
+	        color: $spearmintGreen;
+	      }
+    	}
+  	}
+	&:first-child {
+		border-top: 2px solid darken($mintGreen, 10%);
+	}
+	@media (max-width: 940px) {
+		position: static;
+		display: none;
 	}
 }
 

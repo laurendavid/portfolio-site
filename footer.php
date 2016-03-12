@@ -1,6 +1,6 @@
 <footer>
   <div class="wrapper flexContainer">
-    <p>&copy; <?php echo date('Y'); ?> | Made with <i class="fa fa-heart-o"></i> by Lauren David</p>
+    <p>&copy; <?php echo date('Y'); ?> | Created by Lauren David</p>
     <div class="socialLinks">
 	    <?php wp_nav_menu( array(
 	      'container' => false,

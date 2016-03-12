@@ -9,16 +9,20 @@ h1 {
 	font-size: 5.5rem;
 	letter-spacing: 9px;
 	position: relative;
-	margin-top: 13%;
-	&::after {
-		content: '';
-		display: block;
-		width: 20%;
-		height: 2px;
-		background: darken($mintGreen, 10%);
-		position: absolute;
-		bottom: -12px;
-		left: 5px;
+	margin: 12% 0 0 0;
+	@media (max-width: 600px) {
+		font-size: 4rem;
+		margin-top: 3%;
+	}
+	@media (max-width: 480px) {
+		font-size: 3rem;
+		letter-spacing: 8px;
+		color: $medGrey;
+	}
+	@media (max-width: 375px) {
+		font-size: 2.5rem;
+		letter-spacing: 2px;
+		color: $medGrey;
 	}
 }
 
@@ -29,9 +33,15 @@ h2.webDev {
 	color: $softBlack;
 	letter-spacing: 2px;
 	margin: 0;
-	position: absolute;
-	top: 57%;
-	right: 37.5%;
+	@media (max-width: 480px) {
+		font-size: 1.8rem;
+		color: $medGrey;
+	}
+	@media (max-width: 375px) {
+		font-size: 1.5rem;
+		color: $medGrey;
+		letter-spacing: 1px;
+	}
 }
 
 h2:not(.webDev) {
@@ -39,6 +49,7 @@ h2:not(.webDev) {
 	position: relative;
 	margin: 0;
 	padding: 0;
+	letter-spacing: 2px;
 	&::after {
 		content: '';
 		display: block;
@@ -48,6 +59,9 @@ h2:not(.webDev) {
 		position: absolute;
 		bottom: -12px;
 		left: 2px;
+	}
+	@media (max-width: 480px) {
+		font-size: 2.5rem;
 	}
 }
 
