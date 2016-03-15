@@ -17,10 +17,18 @@
   <div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');">
     <div class="overlay">
       <section class="fixedNav">
-        <?php wp_nav_menu( array(
-          'container' => false,
-          'theme_location' => 'primary'
-        )); ?>
+        <div class="fixedLinks">
+          <?php wp_nav_menu( array(
+            'container' => false,
+            'theme_location' => 'primary'
+          )); ?>
+        </div>
+        <div class="social">
+          <?php wp_nav_menu( array(
+            'container' => false,
+            'theme_location' => 'social'
+          )); ?>
+        </div>
       </section>
       <div class="wrapper flexContainer">
         <div class="diamond" style="background-image: url('<?php the_field('diamond_image') ?>');">

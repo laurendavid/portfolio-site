@@ -28,6 +28,7 @@ h1 {
 
 h2.webDev {
 	font-size: 2rem;
+	font-weight: 400;
 	font-family: $baseFont;
 	text-transform: uppercase;
 	color: $softBlack;
@@ -47,7 +48,6 @@ h2.webDev {
 h2:not(.webDev) {
 	font-size: 3rem;
 	position: relative;
-	margin: 0;
 	padding: 0;
 	letter-spacing: 2px;
 	&::after {
@@ -84,7 +84,7 @@ a {
 button {
   border: 2px solid lighten($medGrey, 5%);
   background: fade-out($softWhite, 0.7);
-  padding: 1% 2%;
+  padding: 2% 3%;
   &:hover {
   	border: 2px solid lighten($spearmintGreen, 5%);
   	background: fade-out($softWhite, 0.5);

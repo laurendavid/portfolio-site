@@ -7,10 +7,11 @@ $(function(){
 	console.log(height);
 	$(window).scroll(function() {
 	        if ($(this).scrollTop() >= height.top) {
-	            $('.fixedNav ul').fadeIn();
+	        	console.log('hiiii')
+	            $('.fixedNav').fadeIn(500);
 	        }
 	        else {
-	            $('.fixedNav ul').hide();
+	            $('.fixedNav').fadeOut(500);
 	        }
 	});
 });

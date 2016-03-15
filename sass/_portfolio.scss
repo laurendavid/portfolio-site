@@ -36,7 +36,7 @@
 		}
 		.projectImage {
 			background-repeat: no-repeat;
-			background-position: left center;
+			background-position: center center;
 			background-size: contain;
 			border-bottom: 2px solid $lightGrey;
 			img {
@@ -78,3 +78,5 @@
 		}
 	}
 }
+
+// See typeography.scss for View Live button styling

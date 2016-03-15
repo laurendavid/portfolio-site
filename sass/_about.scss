@@ -24,7 +24,7 @@ main {
       width: 50%;
       padding: 5%;
       background-repeat: no-repeat;
-      background-position: left center;
+      background-position: center center;
       background-size: contain;
       @media (max-width: 940px) {
         padding: 0;
@@ -33,11 +33,14 @@ main {
     .bioImage {
       img {
         padding: 8%;
+        position: relative;
+        top: 18px;
       }
       @media (max-width: 940px) {
         width: 65%;
         img {
           padding: 10%;
+          top: 0;
         }
       }
       @media (max-width: 600px) {
@@ -53,6 +56,7 @@ main {
         .social {
           width: 100%;
           margin-top: 2%;
+          padding-left: 5px;
           display: flex;
           flex-flow: row wrap;
           align-items: center;

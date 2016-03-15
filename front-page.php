@@ -77,7 +77,7 @@
     <div class="wrapper flexContainer">
       <section class="location">
         <h2>Email</h2>
-        <h3><a href="mailto:lauren@laurendavid.ca">lauren@laurendavid.ca</a></h3>
+        <h3><a href="mailto:lauren@laurendavid.ca">lauren&#64;laurendavid.ca</a></h3>
         <div class="inside">
           <p><?php the_field('contact_text'); ?></p>
         </div>
