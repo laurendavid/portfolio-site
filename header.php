@@ -23,7 +23,7 @@
             'theme_location' => 'primary'
           )); ?>
         </div>
-        <div class="social">
+        <div class="socialNav">
           <?php wp_nav_menu( array(
             'container' => false,
             'theme_location' => 'social'
