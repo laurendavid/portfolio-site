@@ -2,7 +2,7 @@ main {
   max-width: 100%;
 }
 .aboutMe {
-  padding: 5% 0;
+  padding: 3% 0;
   background: darken($softWhite, 10%); /* fallback for old browsers */
   background: linear-gradient(to bottom, darken($softWhite, 5%) , lighten($lightGrey, 10%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
   @media (max-width: 940px) {

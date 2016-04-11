@@ -1,6 +1,6 @@
 $(function(){
 	$('a').smoothScroll({
-		speed: 400,
+		speed: 300,
 		offset: 0
 	});
 	var height = $('.main').offset();

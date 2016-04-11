@@ -26,7 +26,21 @@
     </div> <!-- ./wrapper -->
   </section>
 
-  <!-- PORTFOLIO SECTION -->
+  <!-- PROFESSIONAL SKILLS SECTION -->
+  <section id="profSkills" class="professional" style="background-image: url('<?php the_field('skills_image'); ?>');">
+    <div class="wrapper">
+      <h2><?php the_field('professional_skills_title'); ?></h2>
+      <div class="flexParent">
+        <ul class="professionalSkills">
+          <?php while (has_sub_field('professional_skills')): ?>
+            <li><?php the_sub_field('professional_skill_set') ?></li>
+          <?php endwhile; ?>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CODING PORTFOLIO SECTION -->
   <section id="portfolio" class="work">
     <div class="wrapper">
        <h2><?php the_field('portfolio_title'); ?></h2>

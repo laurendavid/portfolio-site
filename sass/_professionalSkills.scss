@@ -1,0 +1,21 @@
+.professional {
+	max-width: 100%;
+	padding: 3% 0;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	.flexParent {
+		width: 60%;
+		padding: 3%;
+		margin-top: 4%;
+		display: flex;
+		flex-flow: row wrap;
+		.professionalSkills {
+			width: 100%;
+			li {
+				padding: 3% 2% 2% 3%;
+				font-weight: 600;
+			}
+		}
+	}
+}
